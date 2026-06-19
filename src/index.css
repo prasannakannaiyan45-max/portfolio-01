@@ -1,0 +1,73 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  --color-background: #151515;
+  --color-surface: #151515;
+  --color-primary: #93032E;
+  --color-secondary: #93032E;
+  --color-text: #FFFFFF;
+  --color-text-inverse: #FFFFFF;
+  --color-border: #93032E;
+  --color-muted: rgba(255, 255, 255, 0.6);
+  --color-muted-inverse: rgba(255, 255, 255, 0.6);
+
+  /* ── Typography System ───────────────────────────── */
+  /* Primary sans: geometric, editorial, clean */
+  --font-sans: "Roden", "Avenir Next", "Avenir", "Tenor Sans", "Belleza", "Outfit", "Inter", system-ui, sans-serif;
+  /* Accent serif: elegant italic for headlines & highlights */
+  --font-serif: "Roden", "Avenir Next", "Avenir", "Tenor Sans", "Belleza", "Outfit", "Inter", system-ui, sans-serif;
+  /* Display serif: refined italic for large editorial text */
+  --font-display: "Roden", "Avenir Next", "Avenir", "Tenor Sans", "Belleza", "Outfit", "Inter", system-ui, sans-serif;
+}
+
+/* Custom global styles */
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1, "liga" 1;
+  overflow-x: hidden;
+}
+
+/* Ensure images scale within containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Editorial typography refinements */
+.font-display {
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-variant-ligatures: common-ligatures;
+}
+
+.font-serif {
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Ensure uppercase tracking looks premium */
+[class*="tracking-"] {
+  font-feature-settings: "kern" 1;
+}
+
+/* Hide default scrollbars for sleek look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
